@@ -6,13 +6,12 @@ Basic security and hardening setup for an Ubuntu machine.
 
 * Be running Ubuntu. Might work on other distros too, but I haven't
   tested it.
-* Depends on :
-** user
-** openssh
-** sudo
-** ntp
-** simple_iptables
-** swap
+  * user
+  * openssh
+  * sudo
+  * ntp
+  * simple_iptables
+  * swap
 
 ## Configuration
 
@@ -37,7 +36,7 @@ For example, if the `smtp.smarthost` variable is set to `sendgrid`, the
   "host": "smtp.sendgrid.net",
   "password": "sekrit",
   "port": 587,
-  "username: "myusername"
+  "username": "myusername"
 }
 ```
 
