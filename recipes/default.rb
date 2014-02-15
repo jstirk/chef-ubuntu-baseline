@@ -57,21 +57,23 @@ simple_iptables_rule 'https' do
   jump 'ACCEPT'
 end
 
-# provisions ssmtp configured for a smarthost defined in a data bag
-smarthost = Chef::EncryptedDataBagItem.load(:smarthosts, node.smtp.smarthost)
-unless smarthost.nil?
-  package 'ssmtp'
-  template '/etc/ssmtp/ssmtp.conf' do
-    source 'ssmtp.conf.erb'
-    owner 'root'
-    group 'mail'
-    mode '0640'
-    variables(
-      smarthost: smarthost,
-      domain: node.smtp.rewrite_domain,
-      admin_email: node.smtp.admin_email,
-      hostname: node.server_name
-    )
+if node.smtp.provider == 'ssmtp' then
+  # provisions ssmtp configured for a smarthost defined in a data bag
+  smarthost = Chef::EncryptedDataBagItem.load(:smarthosts, node.smtp.smarthost)
+  unless smarthost.nil?
+    package 'ssmtp'
+    template '/etc/ssmtp/ssmtp.conf' do
+      source 'ssmtp.conf.erb'
+      owner 'root'
+      group 'mail'
+      mode '0640'
+      variables(
+        smarthost: smarthost,
+        domain: node.smtp.rewrite_domain,
+        admin_email: node.smtp.admin_email,
+        hostname: node.server_name
+      )
+    end
   end
 end
 

@@ -13,6 +13,7 @@ default.openssh.server.login_grace_time = '30'
 default.openssh.server.use_p_a_m = 'no'
 default.openssh.server.print_motd = 'no'
 
+default.smtp.provider = 'ssmtp'
 default.smtp.smarthost = 'sendgrid'
 default.smtp.rewrite_domain = node.server_name
 default.smtp.admin_email = node.server_admin
