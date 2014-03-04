@@ -12,7 +12,7 @@ package "tmux"
 
 swap_file '/var/swapfile' do
   size node.memory_mb
-  persist
+  persist true
 end
 
 # provision user accounts
