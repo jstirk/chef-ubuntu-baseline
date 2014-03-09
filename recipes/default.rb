@@ -15,6 +15,9 @@ swap_file '/var/swapfile' do
   persist true
 end
 
+# Set timezone to UTC
+include_recipe 'timezone'
+
 # provision user accounts
 include_recipe 'user::data_bag'
 
