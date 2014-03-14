@@ -80,6 +80,16 @@ if node.smtp.provider == 'ssmtp' then
   end
 end
 
+template '/etc/aliases' do
+  source 'aliases.erb'
+  mode '0644'
+  user 'root'
+  group 'root'
+  variables(
+    :server_admin => node.server_admin
+  )
+end
+
 # provisions apticron for package update notifications
 package 'apticron'
 template '/etc/apticron/apticron.conf' do
