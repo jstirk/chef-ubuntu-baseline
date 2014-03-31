@@ -64,7 +64,6 @@ if node.smtp.provider == 'ssmtp' then
   # provisions ssmtp configured for a smarthost defined in a data bag
   smarthost = Chef::EncryptedDataBagItem.load(:smarthosts, node.smtp.smarthost)
   unless smarthost.nil?
-    package 'ssmtp'
     template '/etc/ssmtp/ssmtp.conf' do
       source 'ssmtp.conf.erb'
       owner 'root'
@@ -77,6 +76,7 @@ if node.smtp.provider == 'ssmtp' then
         hostname: node.server_name
       )
     end
+    package 'ssmtp'
   end
 end
 
