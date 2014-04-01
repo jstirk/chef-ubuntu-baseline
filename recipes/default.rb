@@ -109,3 +109,17 @@ template '/etc/apticron/apticron.conf' do
     diff_only: node.apticron.diff_only,
   )
 end
+
+# sets up fail2ban to prevent ssh brute forcing attempts
+package 'fail2ban'
+template "/etc/fail2ban/jail.local" do
+  source "fail2ban_jail_local.erb"
+  owner "root"
+  group "root"
+  mode 0644
+  notifies :restart, "service[fail2ban]"
+  variables(
+    email: node.server_admin,
+    whitelist: node.whitelist_hosts
+  )
+end

@@ -4,7 +4,7 @@ maintainer_email 'jason@achernarsolutions.com.au'
 license          'All rights reserved'
 description      'Basic setup and security hardening for an Ubuntu server'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.1.6'
+version          '0.2.0'
 
 depends 'user', '~> 0.3.0'
 depends 'openssh', '~> 1.1.4'
@@ -13,3 +13,4 @@ depends 'ntp'
 depends 'simple_iptables', '~> 0.2.4'
 depends 'swap', '~> 0.3.6'
 depends 'timezone'
+depends 'logrotate'

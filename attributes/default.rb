@@ -1,4 +1,5 @@
 default.packages = %w(vim git tmux)
+default.whitelist_hosts = []
 
 default.user.ssh_keygen = false
 
