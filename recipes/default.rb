@@ -112,6 +112,10 @@ end
 
 # sets up fail2ban to prevent ssh brute forcing attempts
 package 'fail2ban'
+service 'fail2ban' do
+  action [ :enable, :start ]
+end
+
 template "/etc/fail2ban/jail.local" do
   source "fail2ban_jail_local.erb"
   owner "root"
