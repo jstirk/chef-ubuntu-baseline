@@ -1,5 +1,5 @@
 [DEFAULT]
-ignoreip = <%= ([ '127.0.0.1/8' ] + @whitelist).join(',') %>
+ignoreip = <%= ([ '127.0.0.1/8' ] + @whitelist).join(' ') %>
 destemail = <%= @email %>
 
 [ssh]
