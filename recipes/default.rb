@@ -75,7 +75,7 @@ if node.smtp.provider == 'ssmtp' then
       source 'ssmtp.conf.erb'
       owner 'root'
       group 'mail'
-      mode '0640'
+      mode '0644'
       variables(
         smarthost: smarthost,
         domain: node.smtp.rewrite_domain,
