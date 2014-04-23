@@ -2,9 +2,9 @@
 # Cookbook Name:: committeemanager
 # Recipe:: default
 #
-# Copyright 2014, YOUR_COMPANY_NAME
+# Copyright 2014, Jason Stirk
 #
-# All rights reserved - Do Not Redistribute
+# See LICENCE.md for licencing information.
 
 package "vim"
 package "git"

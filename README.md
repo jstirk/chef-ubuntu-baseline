@@ -57,5 +57,4 @@ Just include `ubuntu-baseline` in your node's `run_list`:
 
 ## License and Authors
 
-Authors: Jason Stirk
-All rights reserved
+Licenced under the MIT licence. See LICENCE.md for more information.
