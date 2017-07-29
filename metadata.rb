@@ -4,9 +4,9 @@ maintainer_email 'jason@oobleyboo.com'
 license          'MIT, (c) 2014 Jason Stirk. See LICENCE.md'
 description      'Basic setup and security hardening for an Ubuntu server'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '1.4.0'
+version          '1.0.0'
 
-depends 'user', '~> 5.1.0'
+depends 'user', '~> 4'
 depends 'openssh', '~> 1.1.4'
 depends 'sudo', '~> 2.6.0'
 depends 'ntp', '~> 1.11.1'
