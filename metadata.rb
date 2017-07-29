@@ -8,7 +8,7 @@ version          '0.4.0'
 
 depends 'user', '~> 0.3.0'
 depends 'openssh', '~> 1.1.4'
-depends 'sudo'
+depends 'sudo', '~> 2.6.0'
 depends 'ntp'
 depends 'simple_iptables', '~> 0.2.4'
 depends 'swap', '~> 0.3.6'
