@@ -2,8 +2,8 @@
 ignoreip = <%= ([ '127.0.0.1/8' ] + @whitelist).join(' ') %>
 destemail = <%= @email %>
 
-[ssh]
+[sshd]
 enabled = true
 
-[ssh-ddos]
+[sshd-ddos]
 enabled = true
